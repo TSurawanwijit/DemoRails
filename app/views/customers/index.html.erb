@@ -1,0 +1,31 @@
+<h1>Table: Customers</h1>
+
+<div id="customers">
+
+ <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First name:</th>
+          <th scope="col">Last name:</th>
+          <th scope="col">Show</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+          <% @customers.each do |customer| %>
+
+
+            <%= render "customer_row", customer: customer %>
+
+          <% end %>
+
+      </tbody>
+    </table>
+
+</div>
+
+</br>
+<%= link_to "New customer", new_customer_path, class:"btn btn-primary" %>
